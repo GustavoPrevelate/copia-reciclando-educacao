@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link para arquivos js -->
+    <script src="https://kit.fontawesome.com/896b01c4e1.js" crossorigin="anonymous"></script>
+    <script src="./js/app.js" defer type="module"></script>
+
+    <!-- Link para importação de icones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Link para css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/indexHeader.css">
+    <link rel="stylesheet" href="./css/indexFooter.css">
+    <link rel="stylesheet" href="./css/indexMenu.css">
+    <link rel="stylesheet" href="./css/indexMain.css">
+    
+
+    <title>Reciclando Educação</title>
+</head>
+
+<body>
+    <header>
+
+        <div id="container__header">
+            <div class="topo">
+                <div class="menu__hamburger">
+                    <img src="./icon/menu__hamburger.png" alt="menu de acesso">
+                    
+                </div>
+                <div class="logo__site">
+                    <img src="./img/logo__site.png" class="logo-desktop" alt="logo projeto">
+                    <img src="./img/logo__site__deitado.png" class="logo-desktop__deitada" alt="logo projeto">
+                </div>
+                <div class="aba__login">
+                    <img src="./icon/login__icon.png" class="icon__login" alt="Aba de login">
+                    <span class="texto__login">Login</span>
+                </div>
+            </div>
+            <nav class="menu-container">
+                
+                <a href="/projetos" onclick="route()" class="navegacao">
+                    <img src="./icon/icone__prancheta.png" alt="">Projetos
+                </a>
+                <a href="/empresas" onclick="route()" class="navegacao">
+                    <img src="./icon/icone__empresa.png" alt="">Empresas
+                </a>
+                <a href="/sobre_nos" onclick="route()" class="navegacao">
+                    <img src="./icon/icone__sobrenos.png" alt="">Sobre Nós
+                </a>
+                <a href=" /pontos_coleta" onclick="route()" class="navegacao">
+                    <img src="./icon/icone__pontocoleta.png" alt="">Pontos de Coleta
+                </a>
+                <a href=" /faca_parte" onclick="route()" class="navegacao">
+                    <img src="./icon/icone__facaparte.png" alt="">Faça Parte
+                </a>
+            </nav>
+
+            <div class="navegacao__site">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main id="root">
+        <div class="area__main">
+            <div class="container__imagem__recepcionar__cliente">
+                <img class="imagem__recepcionar__cliente" src="./img/recepcao__site.png" alt="Imagem recepcionar o usuário">
+            </div>
+            <div class="container__texto__recepcionar__cliente">
+                <span class="texto__recepcionar__cliente">
+                    Sejam bem vindos ao projeto 
+                    Reciclando educação!
+                    verifiquem as abas de navegação, para um melhor entendimento do projeto. 
+                </span>
+            </div>
+        </div> 
+    </main>
+
+    <footer>
+       <div class="area__footer">
+            <div class="container__footer__telefone">
+                <!-- Icone Telefone -->
+                <i class="fa-solid fa-phone" id="icones__footer"></i>
+                <span class="texto__infomacoes">4002-0922</span>
+            </div>
+            <div class="container__footer__email">
+                <!-- Icone Email -->
+                <i class="fa-solid fa-envelope" id="icones__footer"></i>
+                <span class="texto__infomacoes">reciclando.educacao@gmail.com</span>
+            </div>
+            <div class="container__footer__facebook">
+                <!-- Icone facebook -->
+                <i class="fa-brands fa-facebook" id="icones__footer"></i>
+                <span class="texto__infomacoes">Reciclando Educação</span>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+
+</html>
