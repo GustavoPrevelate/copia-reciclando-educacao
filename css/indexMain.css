@@ -101,8 +101,10 @@
     .container__texto__recepcionar__cliente{
         grid-area: texto;
         display: flex;
-        
-        max-width: 375px;
+        max-width: 325px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
         
     }
     
