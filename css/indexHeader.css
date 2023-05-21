@@ -5,13 +5,13 @@
     grid-template-areas: 
     "logo login";
     grid-template-columns: 100px 1fr 70px;
-    width: 100%;
+    width: 100%;   
 }
 
 .topo{
     justify-content: space-between;
     display: flex;
-    gap: 1530px;
+    width: 1920px;
     background-color: var(--dark-green-color);
     
 }
@@ -54,6 +54,64 @@
 .texto__login{
     display: flex;
     color: var(--white-color);
+}
+
+/* Responsividade para LAPTOP */
+
+@media(max-width: 1024px){
+    .container__header{
+        display: grid;
+        grid-template-areas: 
+        "hamburger logo login";
+        grid-template-columns: 100px 1fr 70px;
+        max-width: 1024px;
+        width: 1024px;
+    }
+    
+    .topo{
+        justify-content: space-between;
+        display: flex;
+        gap: 0px;
+        background-color: var(--dark-green-color);
+        width: 1024px;
+    }
+    
+    /* Menu hamburger */
+    
+    .menu__hamburger{
+       display: none;
+    }
+    
+    /* Logo do site */
+    
+    .logo__site{
+       grid-area: logo;
+       padding-right: 300px;
+       
+    }
+    .logo-desktop{
+        display: flex;
+        width: 265px;
+        height: 100px;
+        
+    }
+    
+    /* Aba de login */
+    
+    .aba__login{
+        grid-area: login;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+    }
+    
+    
+    .texto__login{
+        display: flex;
+        color: var(--white-color);
+    }
 }
 
 /* Responsividade para TABLET */
@@ -118,9 +176,14 @@
     }
 }
 
-/* Responsividade para CELULAR */
+/* Responsividade para celular Largo */
 
-@media(max-width: 375px){
+@media(max-width: 425px){
+
+    header{
+        max-width: 425px;
+    }
+
     .container__header{
         display: grid;
         display: flex;
@@ -128,9 +191,7 @@
         "logo"
         "hamburger";
         grid-template-columns: 183px;
-        max-width: 375px;
-        
-        
+        max-width: 425px;
     }
     
     .topo{
@@ -138,9 +199,8 @@
         display: flex;
         gap: 0px;
         background-color: var(--dark-green-color);
-        max-width: 375px;
+        max-width: 425px;
         height: 183px;
-        
     }
     
     /* Menu hamburger */
@@ -159,12 +219,82 @@
     .logo__site{
        grid-area: logo;
        padding-right: 0px;
-       
-       
     }
     .logo-desktop{
         display: flex;
-        width: 195px;
+        width: 95px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .logo-desktop__deitada{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 120px;
+    }
+    /* Aba de login */
+    
+    .aba__login{
+        grid-area: login;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
+        display: none;
+    }
+    
+    
+    .texto__login{
+        display: flex;
+        color: var(--white-color);
+    }
+}
+
+/* Responsividade para celular médio */
+
+@media(max-width: 375px){
+
+    .container__header{
+        display: grid;
+        display: flex;
+        grid-template-areas: 
+        "logo"
+        "hamburger";
+        grid-template-columns: 183px;
+        max-width: 375px;
+    }
+    
+    .topo{
+        justify-content: space-between;
+        display: flex;
+        gap: 0px;
+        background-color: var(--dark-green-color);
+        max-width: 375px;
+        height: 183px;
+    }
+    
+    /* Menu hamburger */
+    
+    .menu__hamburger{
+        grid-area: hamburger;
+        display: flex;
+        margin-left: 30px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    
+    /* Logo do site */
+    
+    .logo__site{
+       grid-area: logo;
+       padding-right: 0px;
+    }
+    .logo-desktop{
+        display: flex;
+        width: 95px;
         height: 100px;
         justify-content: center;
         align-items: center;
@@ -185,6 +315,80 @@
         justify-content: center;
         margin-top: 80px;
         display: none;
+    }
+    
+    
+    .texto__login{
+        display: flex;
+        color: var(--white-color);
+    }
+}
+
+/* Responsividade para celular pequeno */
+
+@media(max-width: 320px){
+
+    .container__header{
+        display: grid;
+        display: flex;
+        grid-template-areas: 
+        "logo"
+        "hamburger";
+        grid-template-columns: 183px;
+        max-width: 320px;
+        
+        
+    }
+    
+    .topo{
+        justify-content: space-between;
+        display: flex;
+        gap: 0px;
+        background-color: var(--dark-green-color);
+        max-width: 320px;
+        height: 183px;
+        
+    }
+    
+    /* Menu hamburger */
+    
+    .menu__hamburger{
+        grid-area: hamburger;
+        display: flex;
+        margin-left: 30px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    
+    /* Logo do site */
+    
+    .logo__site{
+       grid-area: logo;
+       padding-right: 0px;
+      
+       
+    }
+    .logo-desktop{
+        display: none;
+        
+    }
+    .logo-desktop__deitada{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 240px;
+    }
+    /* Aba de login */
+    
+    .aba__login{
+        grid-area: login;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
+        display: none;
+
     }
     
     
