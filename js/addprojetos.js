@@ -26,3 +26,6 @@ inputFile.addEventListener("change", function (e) {
     pictureImage.innerHTML = pictureImageTxt;
   }
 });
+
+// Adicionar imagem ao projeto -- precisa modificar futuramente
+
