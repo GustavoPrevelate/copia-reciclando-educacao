@@ -30,6 +30,9 @@ html {
     align-items: center;
     justify-content: center;
   }
+  /* section{
+    height: 100vh;
+  } */
   
   footer {
     grid-area: footer;
