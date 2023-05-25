@@ -61,6 +61,7 @@ height: 200px;
   .picture {
     grid-area: imagem;
     width: 400px;
+    
     aspect-ratio: 16/9;
     background: var(--dark-green-color);
     display: flex;
@@ -86,7 +87,8 @@ height: 200px;
   }
   
   .picture__img {
-    max-width: 100%;
+    max-width: 400px;
+    max-height: 500px;
   }
   
 /* ------------------------- */    
