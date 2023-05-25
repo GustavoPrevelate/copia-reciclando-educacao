@@ -1,51 +1,58 @@
-/* ABA PARA INSERIR UM NOVO PROJETO */
-
-/* -------------------------------------------------------- */
-/* Container que possui todos os outros container dessa aba */
-/* -------------------------------------------------------- */
+/* ------------------------- */    
+    /* TODO FORMULÁRIO -- INSERÇÃO PROJETO*/
+/* ------------------------- */
 
 .form{
     display: grid;
-    grid-template-areas: 
-    "titulo"
-    "imagem"
-    "combobox"
-    "descricao"
-    "enviar";
-    grid-template-rows: 119px 621px 83px 500px;
-    justify-content: center;
-    margin-top: 102px;
-    margin-bottom: 59px;
-}
-
-/* -------------------------------------------------------- */
-/* Todo container referente ao titulo do projeto */
-/* -------------------------------------------------------- */
-
-.form-titulo{
-    grid-area: titulo;
     display: flex;
-    width: 560px;
-    height: 76px;
-    background-color: var(--dark-green-color);
+    grid-area: 
+    "titulo"
+    "descricao"
+    "imagem"
+    "selecionar"
+    "enviar";
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin-top: 60px;
+    gap: 40px;
 }
-#titulo__projeto{
-    display: flex;
-    font-size: 2rem;
-    width: 100%;
-    height: 100%;
-    font-family: 'Exo';
-    color: var(--white-color);
-    background-color: var(--dark-green-color);
-    
-} 
-      
-/* -------------------------------------------------------- */
-/* Todo container referente a imagem selecionada */
-/* -------------------------------------------------------- */
+
+
+/* ------------------------- */    
+    /* TITULO DO PROJETO*/
+/* ------------------------- */
+.input__titulo__projeto{
+    grid-area: titulo;
+ display: flex;
+ width: 400px;
+ height: 40px;
+ background-color: var(--dark-green-color);
+ color: var(--white-color);
+ 
+}
+
+
+
+/* ------------------------- */    
+    /* DESCRIÇÃO DO PROJETO*/
+/* ------------------------- */
+
+
+.descricao__projeto{
+    grid-area: descricao;
+display: flex;
+background-color: var(--dark-green-color);
+color: var(--white-color);
+width: 400px;
+height: 200px;
+}
+
+
+
+/* ------------------------- */    
+    /* INSERÇÃO DA IMAGEM */
+/* ------------------------- */
 
 #picture__input {
     display: none;
@@ -53,112 +60,80 @@
   
   .picture {
     grid-area: imagem;
-    width: 560px;
-    height: 560px;
+    width: 400px;
     aspect-ratio: 16/9;
     background: var(--dark-green-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--green-color);
-    font-size: 2rem;
-    border: 3px dashed currentcolor;
+    color: var(--white-color);
+    border: 4px dashed currentcolor;
     cursor: pointer;
-    font-family: 'Exo';
-    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    font-family: sans-serif;
+    transition: color 500ms ease-in-out, background 500ms ease-in-out;
     outline: none;
     overflow: hidden;
   }
   
   .picture:hover {
     color: var(--green-color);
-    background: var(--white-color);
+    background: var(--gray-color);
   }
   
   .picture:active {
-    border-color: var(--green-color);
-    color: var(--green-color);
-    background: #eee;
-  }
-  
-  .picture:focus {
-    color: #777;
-    background: var(--white-color);
-    box-shadow: 0 0 10px var(--green-color);
+    border-color: var(--black-color);
+    background: var(--black-color);
   }
   
   .picture__img {
     max-width: 100%;
-    max-height: 100%;
   }
+  
+/* ------------------------- */    
+    /* STATUS DO PROJETO */
+/* ------------------------- */
 
-  /* -------------------------------------------------------- */
-  /* Todo container referente a checkbox do status do projeto */
-  /* -------------------------------------------------------- */
 
 .container__combobox{
-    grid-area: combobox;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-#select{
+    grid-area: selecionar;
     display: flex;
     background-color: var(--dark-green-color);
+    max-width: 85px;
+    height: 30px;
+
+}
+
+.selecao__status{
+    background-color: var(--dark-green);
     color: var(--white-color);
-    cursor: pointer;
-    width: 145px;
-    height: 40px;
+    display: flex;
+    width: 200px;
 }
 
-/* -------------------------------------------------------- */
-  /* Todo o container referente a descrição do projeto */
-/* -------------------------------------------------------- */
-
-.form-content{
-    grid-area: descricao;
-    display: flex;
-    width: 560px;
-    height: 460px;
-    background-color: var(--dark-green-color);
-    justify-content: flex-start;
-    
-}
-#descricao__projeto{
-    display: flex;
-    width: 100%;
-    background-color: var(--dark-green-color);
-    font-size: 2rem;
-    font-family: 'Exo';
+.selecao__status:hover{
+    background-color: var(--dark-green);
     color: var(--white-color);
     
 }
 
-/* -------------------------------------------------------- */
-  /* Container - Enviar projeto */
-/* -------------------------------------------------------- */
+.opcoes__dentro__selecao__status{
+    background-color: var(--dark-green-color);
+}
 
-.container__button__enviar__projeto{
+/* ------------------------- */    
+    /* BOTÃO ENVIAR PROJETO */
+/* ------------------------- */
+
+
+.botao__enviar__projeto{
     grid-area: enviar;
     display: flex;
-    width: 100%;
-    height: 80px;
-    background-color: var(--green-color);
     justify-content: center;
     align-items: center;
-}
-
-#enviar__projeto{
-    display: flex;
-    width: 100%;
-    height: 80px;
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Exo';
-    box-shadow: 0 0 4px var(--black-color);
-    background-color: var(--green-color);
     color: var(--white-color);
-    justify-content: center;
-    align-items: center;
+    background-color: var(--green-color);
+    border-width: 2px;
+    border-color: var(--white-color);
+    width: 400px;
+    height: 100px;
 }

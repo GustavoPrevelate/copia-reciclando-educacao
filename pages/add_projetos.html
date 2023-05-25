@@ -7,6 +7,7 @@
     <!-- Link para CSS -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/add_projetos.css">
     
 
@@ -29,48 +30,43 @@
         <form id="form" class="form">
             <!-- Titulo do projeto inserido -->
 
-            <div class="form-titulo">
+            <div class="form-content">
                 <input 
                 type="text"
+                class="input__titulo__projeto"
                 id="titulo__projeto"
                 placeholder="Digite o titulo do projeto"
+                required
                 />
+            </div>
+
+            <!-- Container - descrição do projeto -->
+            <div class="form-content">
+                <textarea class="descricao__projeto" rows="10" id="descricao__projeto" name="experiencia" placeholder="Digite a descrição do projeto" required></textarea>
             </div>
 
             <!-- Imagem do projeto inserida -->
 
-            <label class="picture" for="picture__input" tabIndex="0">
+            <label class="picture" for="picture__input" tabIndex="0" >
                 <span class="picture__image"></span>
+                <input type="file" name="picture__input" id="picture__input" required>
             </label>
-            <input type="file" name="picture__input" id="picture__input">
 
             <!-- Combobox - status do projeto -->
 
             <div class="container__combobox">
-                <select id="select">
-                    <option value="ativo">Ativo</option>
-                    <option value="finalizado">Finalizado</option>
+                <select class="selecao__status" id="select" required>
+                    <option class="opcoes__dentro__selecao__status" selected disabled value="">Selecione</option>
+                    <option class="opcoes__dentro__selecao__status" value="ativo">Ativo</option>
+                    <option class="opcoes__dentro__selecao__status" value="finalizado">Finalizado</option>
                 </select>
             </div>
             
-
-            <!-- Container - descrição do projeto -->
-
-            <div class="form-content">
-                <input 
-                type="text"
-                id="descricao__projeto"
-                placeholder="Digite a descrição do projeto"
-                />
-            </div>
-
-            <!-- Container - enviar projeto -->
+            <!-- Botão - enviar projeto -->
 
             <div class="container__button__enviar__projeto">
-                <button id="enviar__projeto">Enviar</button>
+                <button class="botao__enviar__projeto" id="enviar__projeto" type="submit">Enviar projeto</button>
             </div>
-
-            
 
         </form>
         
