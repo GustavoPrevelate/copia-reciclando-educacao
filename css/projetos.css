@@ -52,8 +52,9 @@
    
 .texto__estatico{
     display: flex;
-    font-size: 1.2rem;
-    width: 400px;
+    font-size: 1.7rem;
+    width: 800px;
+    margin-bottom: 20px;
     color: var(--green-color);  
 }
 
@@ -214,7 +215,7 @@
 
 .descricao__projeto{
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 400;
     
 }
