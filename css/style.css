@@ -11,7 +11,7 @@ html {
     "header"
     "main"
     "footer";
-    grid-template-rows: 150px 1fr 100px;
+    grid-template-rows: 200px 1fr 100px;
     overflow-y: scroll;
     overflow-x: hidden;
   }

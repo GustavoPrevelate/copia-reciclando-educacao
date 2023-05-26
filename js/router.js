@@ -1,6 +1,6 @@
 'use strict'
 
-import { getSlides } from './carouselprojetos.js'
+
 
 const routes = {
     '/'                :       '../pages/inicio.html',
@@ -21,16 +21,7 @@ const route = async () => {
     const html = await response.text()
 
     document.getElementById('root').innerHTML = html
-
-
-    if(getSlides){
-
-    }
-
-    if(path == '/projetos'){
-        getSlides()
-    }
-    
+       
     console.log(html)
 
 
