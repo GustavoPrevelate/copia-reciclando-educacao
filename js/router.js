@@ -1,12 +1,14 @@
 'use strict'
 
+import { getSlides } from './carouselprojetos.js'
+
 const routes = {
-    '/': '/pages/inicio.html',
-    '/projetos': '/pages/projetos.html',
-    '/empresas': '/pages/empresas.html',
-    '/sobre_nos': '/pages/sobre_nos.html',
-    '/pontos_coleta': '/pages/pontos_coleta.html',
-    '/faca_parte': '/pages/faca_parte.html'
+    '/'                :       '../pages/inicio.html',
+    '/projetos'        :       '../pages/projetos.html',
+    '/empresas'        :       '../pages/empresas.html',
+    '/sobre_nos'       :       '../pages/sobre_nos.html',
+    '/pontos_coleta'   :       '../pages/pontos_coleta.html',
+    '/faca_parte'      :       '../pages/faca_parte.html'
 }
 
 const route = async () => {
@@ -20,6 +22,15 @@ const route = async () => {
 
     document.getElementById('root').innerHTML = html
 
+
+    if(getSlides){
+
+    }
+
+    if(path == '/projetos'){
+        getSlides()
+    }
+    
     console.log(html)
 
 
