@@ -10,11 +10,7 @@
     <script src="https://kit.fontawesome.com/896b01c4e1.js" crossorigin="anonymous"></script>
     <script src="./js/app.js" defer type="module"></script>
 
-  
     <script src="./js/slides.js" defer type="module"></script>
-    
-    
-
 
     <!-- Link para importação de icones e fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,21 +30,76 @@
     <link rel="stylesheet" href="./css/pontos__de__coleta.css">
     <link rel="stylesheet" href="./css/projetos.css">
 
-    
+
     <script src="./js/carouselprojetos.js" defer></script>
 
-    
+
     <title>Reciclando Educação</title>
 </head>
 
 <body>
-    <header>
 
-        <div id="container__header">
+    <header id="header">
+        <!-- <div id="container__header"> -->
+        <div class="logo__site">
+            <img src="./img/logo__site.png" class="logo-desktop" alt="logo projeto">
+            <img src="./img/logo__site__deitado.png" class="logo-desktop__deitada" alt="logo projeto">
+        </div>
+
+        <!-- <a id="logo" href="">Logo</a> -->
+
+        <nav id="nav">
+
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+
+                <span id="hamburger"></span>
+            </button>
+
+            <ul id="menu" role="menu">
+                <li>
+                    <img src="./icon/icone__prancheta.png" alt="">
+                    <a href="/projetos" onclick="route()" class="navegacao">Projetos</a>
+                </li>
+
+                <li>
+                    <img src="./icon/icone__empresa.png" alt="">
+                    <a href="/empresas" onclick="route()" class="navegacao">Empresa</a>
+                </li>
+
+                <li>
+                    <img src="./icon/icone__sobrenos.png" alt="">
+                    <a href="/sobre_nos" onclick="route()" class="navegacao">Sobre nós</a>
+                </li>
+
+                <li>
+                    <img src="./icon/icone__pontocoleta.png" alt="">
+                    <a href="/pontos_coleta" onclick="route()" class="navegacao"> Pontos de coleta</a>
+                </li>
+
+                <li>
+                    <img src="./icon/icone__facaparte.png" alt="">
+                    <a href="/faca_parte" onclick="route()" class="navegacao">Faça parte</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="aba__login">
+            <img src="./icon/login__icon.png" class="icon__login" alt="Aba de login">
+            <span class="texto__login">Login</span>
+        </div>
+        <!-- </div> -->
+
+    </header>
+
+
+
+    <!-- <header> --  <div id="container__header">
             <div class="topo">
                 <div class="menu__hamburger">
                     <img src="./icon/menu__hamburger.png" alt="menu de acesso">
-                    
+
                 </div>
                 <div class="logo__site">
                     <img src="./img/logo__site.png" class="logo-desktop" alt="logo projeto">
@@ -60,7 +111,7 @@
                 </div>
             </div>
             <nav class="menu-container">
-                
+
                 <a href="/projetos" onclick="route()" class="navegacao">
                     <img src="./icon/icone__prancheta.png" alt="">Projetos
                 </a>
@@ -79,31 +130,30 @@
             </nav>
 
             <div class="navegacao__site">
-                    <i id="bt-hamburguer" class="fa-solid fa-bars"></i>
-                    <i id="bt-fechar" class="fa-solid fa-xmark"></i>
+                <i id="bt-hamburguer" class="fa-solid fa-bars"></i>
+                <i id="bt-fechar" class="fa-solid fa-xmark"></i>
             </div>
-
         </div>
-
-    </header>
+    </header> -->
 
     <main id="root">
         <div class="area__main">
             <div class="container__imagem__recepcionar__cliente">
-                <img class="imagem__recepcionar__cliente" src="./img/recepcao__site.png" alt="Imagem recepcionar o usuário">
+                <img class="imagem__recepcionar__cliente" src="./img/recepcao__site.png"
+                    alt="Imagem recepcionar o usuário">
             </div>
             <div class="container__texto__recepcionar__cliente">
                 <span class="texto__recepcionar__cliente">
-                    Sejam bem vindos ao projeto 
+                    Sejam bem vindos ao projeto
                     Reciclando educação!
-                    verifiquem as abas de navegação, para um melhor entendimento do projeto. 
+                    verifiquem as abas de navegação, para um melhor entendimento do projeto.
                 </span>
             </div>
-        </div> 
+        </div>
     </main>
 
     <footer>
-       <div class="area__footer">
+        <div class="area__footer">
             <div class="container__footer__telefone">
                 <!-- Icone Telefone -->
                 <i class="fa-solid fa-phone" id="icones__footer"></i>
@@ -119,11 +169,14 @@
                 <i class="fa-brands fa-facebook" id="icones__footer"></i>
                 <span class="texto__infomacoes">Reciclando Educação</span>
             </div>
-            
+
         </div>
-    </footer>  
-    
+    </footer>
+
+
+    <script src="./js/menu.js"></script>
     <script src="./js/carouselprojetos.js" type="module"></script>
+
 </body>
 
 </html>
