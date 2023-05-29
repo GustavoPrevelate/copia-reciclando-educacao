@@ -33,11 +33,30 @@
 
     <div class="controle__container">
 
+        <div class="calendario__checkbox">
+            
         <div class="datapicker__container">
             <p>Data Inicio: <input type="text" id="calendario__inicio" /></p>
-            <p>Data Fim:    <input type="text" id="calendario__fim" /></p>
+            <p>Data Fim: <input type="text" id="calendario__fim" /></p>
         </div>
 
+        <div class="form-content">
+            <div class="container__combobox__material">
+                <select class="selecao__material" id="select" required>
+                    <option class="opcoes__dentro__selecao__material" selected disabled value="">Material</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__madeira">Madeira</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__metal">Metal</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__papel">Papel</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__pilha">Pilhas</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__plastico">Plástico</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__vidro">Vidro</option>
+                    <option class="opcoes__dentro__selecao__material" value="material__diversos__materiais">Diversos
+                        materiais</option>
+                </select>
+            </div>
+        </div>
+
+</div>
         <div id="container"></div>
     </div>
 

@@ -6,41 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-
-    </style>
-
 </head>
 
+<style>
+    .container__combobox__cadastro__empresa__material {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: green;
+
+    }
+</style>
+
 <body>
-    <fieldset>
-        <legend> Escolha seus interesses </legend>
-        <div>
-            <input type="checkbox" id="codificação" name="interesse" value="codificação">
-            <label for="coding"> Codificação </label>
+
+    <div class="form-content">
+        <div class="container__combobox__cadastro__empresa__material">
+            <select class="selecao__material" id="select" required>
+                <option class="opcoes__dentro__selecao__material" selected disabled value="">Material</option>
+                <option class="opcoes__dentro__selecao__material" value="material__madeira">Madeira</option>
+                <option class="opcoes__dentro__selecao__material" value="material__metal">Metal</option>
+                <option class="opcoes__dentro__selecao__material" value="material__papel">Papel</option>
+                <option class="opcoes__dentro__selecao__material" value="material__pilha">Pilhas</option>
+                <option class="opcoes__dentro__selecao__material" value="material__plastico">Plástico</option>
+                <option class="opcoes__dentro__selecao__material" value="material__vidro">Vidro</option>
+                <option class="opcoes__dentro__selecao__material" value="material__diversos__materiais">Diversos
+                    materiais</option>
+            </select>
         </div>
-        <div>
-            <input type="checkbox" id="música" name="interesse" value="música">
-            <label for="music"> Música </label>
-        </div>
-    </fieldset>
+    </div>
 
-    <script>
-        var otherCheckbox = document.querySelector('entrada [valor = "outro"]');
-        var otherText = document.querySelector('input [id = "otherValue"]');
-        otherText.style.visibility = 'oculto';
-
-        otherCheckbox.onchange = function () {
-            if (otherCheckbox.checked) {
-                otherText.style.visibility = 'visible';
-                otherText.value = '';
-            } else {
-                otherText.style.visibility = 'hidden';
-            }
-        };
-
-    </script>
 </body>
 
 </html>
