@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/896b01c4e1.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/combobox.css">
+    <link rel="stylesheet" href="../css/cadastro_material.css">
+
+    <script src="../js/cadastro__material.js" defer></script>
+
+    <title>Cadrasto de Materiais</title>
+</head>
+
+<body>
+
+    <div class="container__global__cadastro__empresa">
+        <div class="container">
+            <form id="form" class="form">
+                <div class="form-content">
+                    <label for="nome__doador">Quem doou?</label>
+                    <input type="text" id="nome__doador" placeholder="Digite o nome do doador" />
+                    <a>Aqui vai a mensagem de erro....</a>
+                </div>
+
+                <div class="form-content">
+                    <label for="quantia">Quantidade doada:</label>
+                    <input type="text" id="quantidade" placeholder="Digite a quantidade doada" />
+                    <a>Aqui vai a mensagem de erro....</a>
+                </div>
+
+                <div class="form-content">
+                    <div class="container__combobox__cadastro__empresa__material">
+                        <select class="selecao__material" id="select" required>
+                            <option class="opcoes__dentro__selecao__material" selected disabled value="">Material
+                            </option>
+                            <option class="opcoes__dentro__selecao__material" value="material__madeira">Madeira</option>
+                            <option class="opcoes__dentro__selecao__material" value="material__metal">Metal</option>
+                            <option class="opcoes__dentro__selecao__material" value="material__papel">Papel</option>
+                            <option class="opcoes__dentro__selecao__material" value="material__pilha">Pilhas</option>
+                            <option class="opcoes__dentro__selecao__material" value="material__plastico">Plástico
+                            </option>
+                            <option class="opcoes__dentro__selecao__material" value="material__vidro">Vidro</option>
+                            <option class="opcoes__dentro__selecao__material" value="material__diversos__materiais">
+                                Diversos materiais</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <button type="submit">Entrar</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
