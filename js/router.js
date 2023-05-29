@@ -40,7 +40,7 @@
 
 // window.route = route
 
-
+import { handleSubmit } from './cadastroempresa.js';
 
 const routes = {
     '/'                :       './pages/inicio.html',
@@ -104,6 +104,8 @@ const route = async () => {
         // Chamar a função initializeCarousel quando apropriado
         if (path == '/projetos') {
           initializeCarousel();
+        }else if(path == '/faca_parte'){
+            handleSubmit();
         }
     });
     
