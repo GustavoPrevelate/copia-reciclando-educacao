@@ -1,14 +1,12 @@
 'use strict'
 
-
-
 const routes = {
-    '/'                :       '../pages/controle.html',
-    '/material'        :       '../pages/material.html',
-    '/contribuentes'        :       '../pages/contribuentes.html',
-    '/cadastro_materiais'       :       '../pages/cadastro_materiais.html',
-    '/cadastro_empresas'   :       '../pages/cadastro_empresas.html',
-    '/adicionar_projeto'      :       '../pages/adicionar_projeto.html'
+    '/controle': '../pages/controle.html',
+    '/material': '../pages/material.html',
+    '/contribuentes': '../pages/contribuentes.html',
+    '/cadastro__materiais': '../pages/cadastro__materiais.html',
+    '/cadastro__empresa': '../pages/cadastro__empresa.html',
+    '/adicionar__materiais': '../pages/adicionar__materiais.html'
 }
 
 const route = async () => {
@@ -21,10 +19,6 @@ const route = async () => {
     const html = await response.text()
 
     document.getElementById('root').innerHTML = html
-       
-    console.log(html)
-
-
 }
 
 window.route = route
