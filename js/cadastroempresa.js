@@ -1,28 +1,17 @@
-
 const form = document.getElementById("form");
-const nomeEmpresa = document.getElementById("nome__empresa");
-const cnpj = document.getElementById("cnpj");
-const email = document.getElementById("email");
-const telefone = document.getElementById("telefone");
-const numeroWhatsapp = document.getElementById("numero__whatsapp");
-const cep = document.getElementById("cep");
-
-
 export function handleSubmit(event) {
-
-    
-
     event.preventDefault();
-    checkForm();
+    checkForm()
   }
   
   document.addEventListener("DOMContentLoaded", function() {
-    form.addEventListener("submit", handleSubmit);
+    //form.addEventListener("submit", handleSubmit);
   });
 
 
 
 function checkInputNomeEmpresa(){
+  const nomeEmpresa = document.getElementById("nome__empresa");
   const nomeEmpresaValue = nomeEmpresa.value;
 
   if(nomeEmpresaValue == ""){
@@ -30,12 +19,14 @@ function checkInputNomeEmpresa(){
   }else{
     const formItem = nomeEmpresa.parentElement;
     formItem.className = "form-content"
+    return true
   }
 
 }
 
 
 function checkInputCnpj(){
+    const cnpj = document.getElementById("cnpj");
     const cnpjValue = cnpj.value;
   
     if(cnpjValue == ""){
@@ -43,11 +34,13 @@ function checkInputCnpj(){
     }else{
       const formItem = cnpj.parentElement;
       formItem.className = "form-content"
+      return true
     }
   
   }
 
 function checkInputEmail(){
+  const email = document.getElementById("email");
   const emailValue = email.value;
 
   if(emailValue == ""){
@@ -55,6 +48,7 @@ function checkInputEmail(){
   }else{
     const formItem = email.parentElement;
     formItem.className = "form-content"
+    return true
   }
 
 
@@ -62,6 +56,7 @@ function checkInputEmail(){
 
 
 function checkInputTelefone(){
+  const telefone = document.getElementById("telefone");
   const telefoneValue = telefone.value;
 
   if(telefoneValue == ""){
@@ -69,6 +64,7 @@ function checkInputTelefone(){
   }else{
     const formItem = telefone.parentElement;
     formItem.className = "form-content"
+    return true
   }
 
 
@@ -77,6 +73,7 @@ function checkInputTelefone(){
 
 
 function checkInputNumeroWhatsapp(){
+    const numeroWhatsapp = document.getElementById("numero__whatsapp");
     const numeroWhatsappValue = numeroWhatsapp.value;
   
     if(numeroWhatsappValue == ""){
@@ -84,12 +81,14 @@ function checkInputNumeroWhatsapp(){
     }else{
       const formItem = numeroWhatsapp.parentElement;
       formItem.className = "form-content"
+      return true
     }
   
 }
 
   
 function checkInputCep(){
+    const cep = document.getElementById("cep");
     const cepValue = cep.value;
   
     if(cepValue == ""){
@@ -97,28 +96,34 @@ function checkInputCep(){
     }else{
       const formItem = cep.parentElement;
       formItem.className = "form-content"
+      return true
     }
   
 }
 
+function checkInputSelect(){
+  const selectEstado = document.getElementById("select_estado");
+  const selectMaterial = document.getElementById("select_material");
+  const selectPeriodo = document.getElementById("select_periodo");
+  if(selectEstado.value == "" || selectMaterial.value == "" || selectPeriodo.value == ""){
+  }else{
+    return true
+  }
+}
+
 
 function checkForm(){
-  checkInputNomeEmpresa();
-  checkInputCnpj();
-  checkInputEmail();
-  checkInputTelefone();
-  checkInputNumeroWhatsapp();
-  checkInputCep();
-
-  const formItems = form.querySelectorAll(".form-content")
-
-  const isValid = [...formItems].every( (item) => {
-    return item.className === "form-content"
-  });
-
-  if(isValid){
-    alert("CADASTRADO COM SUCESSO!")
+  if(checkInputNomeEmpresa() &&
+  checkInputCnpj() &&
+  checkInputEmail() &&
+  checkInputTelefone()&&
+  checkInputNumeroWhatsapp()&&
+  checkInputCep() &&
+  checkInputSelect()){
+    alert('Cadastrado com sucesso!')
   }
+
+
 
 }
 
@@ -133,3 +138,4 @@ function errorInput(input, message){
 
 }
 
+window.checkForm= checkForm
