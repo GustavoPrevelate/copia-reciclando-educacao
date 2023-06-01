@@ -1,4 +1,7 @@
 'use strict'
+import { criarTabelaControle } from './tabela__controle.js';
+import { criarTabelaMaterial } from './tabela__material.js';
+import { criarTabelaContribuentes } from './tabela__contribuentes.js';
 
 const segundoRoutes = {
     '/home'                         :       './AcessoRestrito/segundoPages/segundoIndex.html',
@@ -12,6 +15,8 @@ const segundoRoutes = {
 
 const segundoRoute = async () => {
     
+
+
     window.event.preventDefault()
     window.history.pushState({}, "", window.event.target.href)
 
@@ -23,21 +28,16 @@ const segundoRoute = async () => {
     const html = await response.text()
 
     document.getElementById('root').innerHTML = html
-
-
-
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     // Resto do seu código
-      
-    //     // Chamar a função initializeCarousel quando apropriado
-    //     if (path == '/projetos') {
-    //       initializeCarousel();
-    //     }else if(path == '/faca_parte'){
-    //         handleSubmit();
-    //     }
-    // });
     
-    console.log(html)
+    if(path == "/controle"){
+        criarTabelaControle()
+    }
+    if(path == "/material"){
+        criarTabelaMaterial()
+    }
+    if(path == "/contribuentes"){
+        criarTabelaContribuentes()
+    }
 }
 
 window.segundoRoute = segundoRoute
