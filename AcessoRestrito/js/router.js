@@ -2,9 +2,11 @@
 import { criarTabelaControle } from './tabela__controle.js';
 import { criarTabelaMaterial } from './tabela__material.js';
 import { criarTabelaContribuentes } from './tabela__contribuentes.js';
+import { dataPicker } from './datapicker.js';
 
 const segundoRoutes = {
-    '/home'                         :       './AcessoRestrito/segundoPages/segundoIndex.html',
+    '/login'                    :       '../pages/login.html',
+    '/home'                     :       './AcessoRestrito/segundoPages/segundoIndex.html',
     '/controle'                 :       './AcessoRestrito/segundoPages/controle.html',
     '/material'                 :       './AcessoRestrito/segundoPages/material.html',
     '/contribuentes'            :       './AcessoRestrito/segundoPages/contribuentes.html',
@@ -31,6 +33,7 @@ const segundoRoute = async () => {
     
     if(path == "/controle"){
         criarTabelaControle()
+        dataPicker()
     }
     if(path == "/material"){
         criarTabelaMaterial()

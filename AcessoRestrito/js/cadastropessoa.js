@@ -1,5 +1,5 @@
-const form = document.getElementById("form");
-export function handleSubmit(event) {
+const form = document.getElementById("form-material");
+export function handleSubmitCadastroPessoa(event) {
     event.preventDefault();
     checkFormPessoaCadastrada()
   }
