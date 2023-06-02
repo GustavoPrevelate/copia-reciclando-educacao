@@ -4,14 +4,13 @@ html {
 
 body {
   display: grid;
-  flex-direction: column;
   height: 100vh;
   font-family: 'Exo';
   grid-template-areas: 
   "header"
   "main"
   "footer";
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 150px 1fr 100px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -25,6 +24,7 @@ header {
 
 #root{
   grid-area: main;
+  display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
