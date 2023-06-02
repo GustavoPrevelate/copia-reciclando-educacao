@@ -5,7 +5,7 @@ import { criarTabelaContribuentes } from './tabela__contribuentes.js';
 import { dataPicker } from './datapicker.js';
 
 const segundoRoutes = {
-    '/login'                    :       '../pages/login.html',
+    '/login'                    :       './pages/login.html',
     '/home'                     :       './AcessoRestrito/segundoPages/segundoIndex.html',
     '/controle'                 :       './AcessoRestrito/segundoPages/controle.html',
     '/material'                 :       './AcessoRestrito/segundoPages/material.html',
